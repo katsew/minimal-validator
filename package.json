@@ -1,0 +1,22 @@
+{
+  "name": "validator",
+  "version": "1.0.0",
+  "description": "",
+  "engine": {
+    "node": "4.2.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js",
+    "test:watch": "npm test -- --watch"
+  },
+  "keywords": [],
+  "author": "katsew",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
