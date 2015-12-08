@@ -13,12 +13,24 @@ describe('Test MailValidator class', () => {
     let validator = new MailValidator();
     let testStr = "sample"
     expect(validator.validate(testStr)).to.be.false;
-  })
+  });
+
+  it('should be valid', () => {
+    let validator = new MailValidator(/sample\@test\.com/);
+    let testStr = "sample@test.com"
+    expect(validator.validate(testStr)).to.be.true;
+  });
 
   it('should be valid', () => {
     let validator = new MailValidator();
     let testStr = "sample@example.com";
     expect(validator.validate(testStr)).to.be.true;
-  })
+  });
+
+  it('should be valid', () => {
+    let validator = new MailValidator();
+    let testStr = "sample@hoge";
+    expect(validator.validate(testStr)).to.be.true;
+  });
 
 });
